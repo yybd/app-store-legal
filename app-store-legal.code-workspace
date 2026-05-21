@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../xcode/ORsyncUI"
+		},
+		{
+			"path": "../officeTab"
+		},
+		{
+			"path": "../../xcode/OfficeTabsApps"
+		}
+	],
+	"settings": {}
+}
