@@ -2,133 +2,227 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - minimalclock</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Minimal Clock widget — Privacy Policy</title>
     <style>
         :root {
-            --bg-color: #f5f5f7;
-            --card-bg: #ffffff;
-            --text-main: #1d1d1f;
-            --text-secondary: #86868b;
-            --accent-color: #007aff;
+            --bg: #0a0a0b;
+            --panel: #141416;
+            --line: #26262b;
+            --fg: #f2f2f4;
+            --muted: #9a9aa2;
+            --accent: #e8e8ea;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.5;
             margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
+            background: var(--bg);
+            color: var(--fg);
+            font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            padding: 48px 20px;
         }
 
-        .container {
+        .wrap {
             max-width: 680px;
-            width: 100%;
-            background: var(--card-bg);
-            padding: 48px;
-            border-radius: 24px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+            margin: 0 auto
+        }
+
+        /* Retro LCD clock header */
+        .clock {
+            position: relative;
+            text-align: center;
+            margin: 0 auto 6px;
+            font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+            font-weight: 600;
+            letter-spacing: .04em;
+            line-height: 1;
+            font-size: clamp(56px, 16vw, 104px);
+        }
+
+        .clock .ghost {
+            position: absolute;
+            inset: 0;
+            color: var(--fg);
+            opacity: .06;
+            user-select: none
+        }
+
+        .clock .time {
+            position: relative
+        }
+
+        .colon {
+            animation: blink 2s steps(1, end) infinite
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: .25
+            }
+        }
+
+        .brand {
+            text-align: center;
+            font-size: 1.05rem;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin: 0 0 4px
         }
 
         h1 {
-            font-size: 32px;
+            text-align: center;
+            font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 8px;
-            letter-spacing: -0.5px;
+            margin: .2em 0 .1em
         }
 
-        .last-updated {
-            color: var(--text-secondary);
-            font-size: 14px;
-            margin-bottom: 40px;
+        .updated {
+            text-align: center;
+            color: var(--muted);
+            font-size: .85rem;
+            margin: 0 0 36px
+        }
+
+        .lead {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 18px 22px;
+            text-align: center;
+            font-size: 1.12rem;
+            font-weight: 600;
+            margin: 0 0 28px;
+        }
+
+        .lead .ok {
+            color: #34c759
+        }
+
+        section {
+            border-top: 1px solid var(--line);
+            padding: 22px 0
+        }
+
+        section:first-of-type {
+            border-top: none
         }
 
         h2 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-top: 32px;
-            margin-bottom: 12px;
-            color: var(--text-main);
+            font-size: 1.08rem;
+            margin: 0 0 .5em;
+            display: flex;
+            align-items: center;
+            gap: .5em
+        }
+
+        h2 .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: inline-block
         }
 
         p {
-            font-size: 16px;
-            margin-bottom: 16px;
-            color: var(--text-main);
+            margin: .4em 0;
+            color: #d5d5da
         }
 
-        .contact-link {
-            color: var(--accent-color);
-            text-decoration: none;
+        a {
+            color: #6cb6ff;
+            text-decoration: none
         }
 
-        .contact-link:hover {
-            text-decoration: underline;
-        }
-
-        hr {
-            border: none;
-            border-top: 1px solid #e5e5e5;
-            margin: 40px 0;
+        a:hover {
+            text-decoration: underline
         }
 
         footer {
+            margin-top: 36px;
             text-align: center;
-            font-size: 12px;
-            color: var(--text-secondary);
-            margin-top: 40px;
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 24px;
-            }
-
-            h1 {
-                font-size: 24px;
-            }
+            color: var(--muted);
+            font-size: .82rem;
+            border-top: 1px solid var(--line);
+            padding-top: 20px
         }
     </style>
 </head>
 
 <body>
+    <div class="wrap">
+        <div class="clock" aria-hidden="true">
+            <span class="ghost">88:88</span>
+            <span class="time"><span id="hh">12</span><span class="colon">:</span><span id="mm">00</span></span>
+        </div>
+        <p class="brand">Minimal Clock widget</p>
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: 3 June 2026</p>
 
-    <div class="container">
-        <h1>Privacy Policy for minimalclock</h1>
-        <div class="last-updated">Last Updated: April 2026</div>
+        <div class="lead"><span class="ok">✓</span>&nbsp; This app does not collect any data.</div>
 
-        <h2>1. Data Collection</h2>
-        <p>minimalclock is designed with a "Privacy First" approach. We do not collect, store, or transmit any of the
-            text
-            snippets you save within the application. All your data remains strictly on your local device.</p>
+        <section>
+            <h2><span class="dot"></span>What we collect</h2>
+            <p>Nothing. The app has no accounts, no sign-in, and makes no network
+                connections. It does not use analytics, advertising, or tracking of any
+                kind. No personal information ever leaves your device.</p>
+        </section>
 
-        <h2>2. Personal Information</h2>
-        <p>We do not require any user accounts, email registrations, or personal information to use the app.</p>
+        <section>
+            <h2><span class="dot"></span>How the app works</h2>
+            <p>The app displays the current time and date using your device's own clock
+                and regional settings. All processing happens locally on your device. The
+                widgets read only the system time — nothing else.</p>
+        </section>
 
-        <h2>3. Payments & Transactions</h2>
-        <p> All transactions are handled securely by Apple through the App
-            Store. We do not collect, process, or have access to any of your payment information, credit card details,
-            or billing address.</p>
+        <section>
+            <h2><span class="dot"></span>Third parties</h2>
+            <p>There are no third-party SDKs, no advertising networks, and no data
+                sharing of any kind.</p>
+        </section>
 
-        <h2>4. Changes to This Policy</h2>
-        <p>We may update our Privacy Policy from time to time. Any changes will be reflected on this page.</p>
+        <section>
+            <h2><span class="dot"></span>Children</h2>
+            <p>The app is suitable for all ages and collects no data from anyone,
+                including children.</p>
+        </section>
 
-        <h2>5. Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at:
-            <a href="mailto:support@bd-tech.net" class="contact-link">support@bd-tech.net</a>
-        </p>
+        <section>
+            <h2><span class="dot"></span>Changes</h2>
+            <p>If this policy ever changes, the updated version will be posted on this
+                page.</p>
+        </section>
 
-        <hr>
+        <section>
+            <h2><span class="dot"></span>Contact</h2>
+            <p>Questions about this policy? Email
+                <a href="mailto:yybd@bd-tech.net">yybd@bd-tech.net</a>.
+            </p>
+        </section>
 
-        <footer>
-            &copy; 2026 Snippet App. All rights reserved.
-        </footer>
+        <footer>© 2026 Y. Ben David · Minimal Clock widget</footer>
     </div>
 
+    <script>
+        (function () {
+            function tick() {
+                var d = new Date();
+                document.getElementById('hh').textContent = String(d.getHours()).padStart(2, '0');
+                document.getElementById('mm').textContent = String(d.getMinutes()).padStart(2, '0');
+            }
+            tick();
+            setInterval(tick, 1000);
+        })();
+    </script>
 </body>
 
 </html>
