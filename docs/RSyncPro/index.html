@@ -4,114 +4,296 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ZmanimBar — Privacy Policy &amp; Support</title>
+    <meta name="robots" content="index, follow">
+    <title>Privacy Policy — RSync Pro</title>
+    <meta name="description"
+        content="Privacy Policy for RSync Pro, a macOS file-synchronization app. RSync Pro collects no data, contains no tracking, and keeps everything on your Mac.">
     <style>
         :root {
-            color-scheme: light dark;
-        }
-
-        body {
-            font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            color: #1d1d1f;
-            background: #fff;
+            --bg: #ffffff;
+            --surface: #f6f6f7;
+            --surface-border: #e4e4e7;
+            --text: #1c1c1e;
+            --muted: #5f5f6a;
+            --accent: #1c1c1e;
+            --accent-soft: #eef1f6;
+            --accent-border: #d6dbe4;
+            --maxw: 760px;
         }
 
         @media (prefers-color-scheme: dark) {
-            body {
-                color: #f5f5f7;
-                background: #1d1d1f;
+            :root {
+                --bg: #0e0e10;
+                --surface: #17171a;
+                --surface-border: #2a2a30;
+                --text: #ececf0;
+                --muted: #a0a0ab;
+                --accent: #ececf0;
+                --accent-soft: #1a1d24;
+                --accent-border: #2c323d;
             }
+        }
 
-            a {
-                color: #2997ff;
-            }
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .wrap {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+
+        header.page {
+            margin-bottom: 28px;
+        }
+
+        .eyebrow {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin: 0 0 6px;
         }
 
         h1 {
-            font-size: 28px;
-            margin-bottom: 4px;
-        }
-
-        h2 {
-            font-size: 20px;
-            margin-top: 32px;
+            font-size: 2rem;
+            line-height: 1.2;
+            margin: 0 0 8px;
+            letter-spacing: -.01em;
         }
 
         .updated {
-            color: #86868b;
+            color: var(--muted);
             font-size: 14px;
-            margin-top: 0;
+            margin: 0;
+        }
+
+        .tldr {
+            margin: 28px 0 8px;
+            background: var(--accent-soft);
+            border: 1px solid var(--accent-border);
+            border-radius: 14px;
+            padding: 18px 20px;
+        }
+
+        .tldr p {
+            margin: 0;
+        }
+
+        .tldr strong {
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 1.18rem;
+            margin: 38px 0 10px;
+            letter-spacing: -.01em;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--surface-border);
+        }
+
+        h3 {
+            font-size: 1rem;
+            margin: 22px 0 6px;
+        }
+
+        p {
+            margin: 0 0 14px;
+        }
+
+        ul {
+            margin: 0 0 14px;
+            padding-left: 1.25em;
+        }
+
+        li {
+            margin: 6px 0;
         }
 
         a {
-            color: #0071e3;
+            color: inherit;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-decoration-thickness: 1px;
+        }
+
+        a:hover {
+            opacity: .7;
+        }
+
+        .muted {
+            color: var(--muted);
         }
 
         code {
-            background: rgba(127, 127, 127, .15);
+            font: 0.875em ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: 5px;
             padding: 1px 5px;
-            border-radius: 4px;
         }
 
-        footer {
-            margin-top: 40px;
-            color: #86868b;
-            font-size: 14px;
+        .contact {
+            margin-top: 36px;
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: 14px;
+            padding: 18px 20px;
+        }
+
+        .contact h2 {
+            border: 0;
+            margin: 0 0 6px;
+            padding: 0;
+        }
+
+        footer.page {
+            margin-top: 48px;
+            padding-top: 18px;
+            border-top: 1px solid var(--surface-border);
+            color: var(--muted);
+            font-size: 13px;
         }
     </style>
 </head>
 
 <body>
-    <h1>ZmanimBar — Privacy Policy</h1>
-    <p class="updated">Last updated: June 8, 2026</p>
+    <div class="wrap">
 
-    <p>ZmanimBar is built privacy-first. The app calculates halachic times (zmanim)
-        locally on your device. We do <strong>not</strong> collect, store, or transmit your
-        personal data, and the app works fully offline. There are no accounts, no analytics,
-        no advertising, and no third-party tracking.</p>
+        <header class="page">
+            <p class="eyebrow">RSync Pro</p>
+            <h1>Privacy Policy</h1>
+            <p class="updated">Last updated: June 9, 2026</p>
+        </header>
 
-    <h2>Location</h2>
-    <p>If you enable automatic location, ZmanimBar uses your device’s location
-        <strong>solely on your device</strong> to compute accurate zmanim for where you are.
-        Your coordinates are never sent to us and never leave your device — except that, to
-        display your city name, the coordinates may be passed to Apple’s geocoding service,
-        which is governed by <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy
-            Policy</a>. You can instead set a city manually and not use location at all.
-    </p>
+        <div class="tldr">
+            <p><strong>The short version:</strong> RSync Pro is built so that your data stays yours.
+                We do not collect, transmit, or have access to any of your information. Everything the app
+                stores — your sync configurations, SSH keys, and logs — stays on your Mac. When you run a sync,
+                your files travel directly between your Mac and the destination you choose (a local folder, or
+                your own server over an encrypted SSH connection). They never pass through us.</p>
+        </div>
 
-    <h2>Calendar</h2>
-    <p>If you choose to add a zman to your calendar, ZmanimBar requests permission to add
-        events to Apple Calendar. It only writes the events you explicitly ask it to add. It
-        does not read, upload, or share your calendar data.</p>
+        <h2>1. Who we are</h2>
+        <p>RSync Pro (“the app”) is developed and published by Y.&nbsp;Ben&nbsp;David (BD-Tech).
+            This policy explains how the app handles information. If you have any questions, contact us at
+            <a href="mailto:support.orsync@bd-tech.com">support.orsync@bd-tech.com</a>.
+        </p>
 
-    <h2>Notifications</h2>
-    <p>Reminders are scheduled locally on your device through Apple’s notification system.
-        No reminder content is sent to any server.</p>
+        <h2>2. Information we do not collect</h2>
+        <p>We do not collect, store, sell, or transmit any personal data. The app contains:</p>
+        <ul>
+            <li>No analytics or usage tracking</li>
+            <li>No advertising and no advertising identifiers</li>
+            <li>No third-party tracking or marketing SDKs</li>
+            <li>No account, sign-in, or registration</li>
+            <li>No telemetry sent to the developer</li>
+        </ul>
+        <p>We never see your files, folder names, server addresses, credentials, or how you use the app.</p>
+        <h3>Crash diagnostics</h3>
+        <p class="muted">If you have chosen to share diagnostics with app developers in macOS
+            <em>System Settings → Privacy &amp; Security → Analytics &amp; Improvements</em>, Apple may make
+            anonymized, aggregated crash reports available to us through Apple’s systems. This is operated by
+            Apple, is governed by Apple’s privacy policy, is opt-in, and contains no information that
+            identifies you. We do not operate any analytics of our own.
+        </p>
 
-    <h2>Purchases</h2>
-    <p>The optional one-time “Pro” upgrade is processed entirely by Apple through the App
-        Store. We do not receive or store your payment information.</p>
+        <h2>3. Information the app stores on your device</h2>
+        <p>To do its job, the app saves the following locally on your Mac, inside its sandboxed
+            application container. This information never leaves your device except as you direct
+            (see “Network connections” below):</p>
+        <ul>
+            <li><strong>Sync configurations</strong> — profile names, source and destination folder paths,
+                and, for remote syncs, the server host name, user name, and port you enter.</li>
+            <li><strong>Security-scoped bookmarks</strong> — macOS references that let the app reopen the
+                specific folders you granted it access to, across launches.</li>
+            <li><strong>SSH keys</strong> — key pairs the app generates, or existing keys you select, for
+                connecting to your own servers.</li>
+            <li><strong>App settings</strong> — your preferences, such as the idle-timeout option.</li>
+            <li><strong>Logs</strong> — records of your sync runs, kept locally so you can review what
+                happened.</li>
+        </ul>
+        <p>You can delete any of this at any time from within the app, and removing the app deletes all
+            of it.</p>
 
-    <h2>Data Storage</h2>
-    <p>Your settings and any custom times you create are stored locally on your device
-        (and shared on-device with the ZmanimBar widget). This information is not transmitted
-        off your device.</p>
+        <h2>4. Network connections</h2>
+        <p>The app connects only to destinations you explicitly configure:</p>
+        <ul>
+            <li><strong>Your servers.</strong> When you run a remote sync or test a connection, the app
+                connects to the server you specified, over SSH (an encrypted protocol). Your files and the
+                credentials needed to authenticate are sent only to that server — never to us or to any third
+                party.</li>
+            <li><strong>Local network discovery (optional).</strong> If you use “Discover on network”, the
+                app uses Bonjour to look for computers on your local network that offer Remote Login (SSH).
+                This scan happens entirely on your Mac; the results are shown only to you and are not sent
+                anywhere.</li>
+        </ul>
+        <p>The app does not contact any server operated by the developer.</p>
 
-    <h2>Children</h2>
-    <p>ZmanimBar is suitable for all ages and collects no personal data from anyone.</p>
+        <h2>5. SSH keys and passwords</h2>
+        <ul>
+            <li>SSH private keys created or used by the app are stored locally in the app’s container and
+                protected by file permissions.</li>
+            <li>If you authenticate with a password (for example, to install a key on a server), the
+                password is used only to make that connection. It is held transiently in a file readable only
+                by you, is never transmitted to the developer, and is not retained beyond the operation.</li>
+        </ul>
 
-    <h2>Changes</h2>
-    <p>If this policy changes, the updated version will be posted on this page.</p>
+        <h2>6. Third-party services</h2>
+        <p>The app uses no third-party analytics, advertising, or cloud services. The file-transfer
+            engine bundled with the app (<code>openrsync</code>) is open-source software that runs locally on
+            your Mac; it is not a service and sends nothing to its authors or to us.</p>
 
-    <h2>Support &amp; Contact</h2>
-    <p>Questions, feedback, or support requests:
-        <a href="mailto:support@bd-tech.net">support@bd-tech.net</a>.
-    </p>
+        <h2>7. Children’s privacy</h2>
+        <p>The app is a general-purpose utility, is not directed to children, and does not knowingly
+            collect information from anyone, including children under the age of 13.</p>
 
-    <footer>© 2026 Yechiel Bendavid. ZmanimBar.</footer>
+        <h2>8. Data retention and deletion</h2>
+        <p>Because all data is stored locally, you are in full control:</p>
+        <ul>
+            <li>Delete individual sync profiles, schedules, history entries, or SSH keys from within the
+                app.</li>
+            <li>Uninstalling RSync Pro removes the app and its locally stored data from your Mac.</li>
+        </ul>
+
+        <h2>9. Security</h2>
+        <p>The app runs inside the macOS App Sandbox, which limits its access to your system. SSH
+            connections are made in an isolated configuration, and credentials and keys are stored within the
+            app’s protected container. While no software can guarantee absolute security, the app is built to
+            keep your data on your device and under your control.</p>
+
+        <h2>10. Changes to this policy</h2>
+        <p>We may update this policy from time to time. When we do, we will revise the “Last updated” date
+            shown at the top of this page. Material changes will be reflected here.</p>
+
+        <div class="contact">
+            <h2>11. Contact us</h2>
+            <p>Questions about this policy or your privacy? Email
+                <a href="mailto:support.orsync@bd-tech.com">support.orsync@bd-tech.com</a> and we’ll be glad to
+                help.
+            </p>
+        </div>
+
+        <footer class="page">
+            <p>© 2026 Y.&nbsp;Ben&nbsp;David. RSync Pro is a macOS file-synchronization utility.
+                “Mac” and “macOS” are trademarks of Apple Inc.</p>
+        </footer>
+
+    </div>
 </body>
 
 </html>
